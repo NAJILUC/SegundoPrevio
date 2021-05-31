@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="clientes") 
+@Table(name="candidatos") 
 public class Candidato implements Serializable{
 
 	private static final long serialVersionUID = 1L;

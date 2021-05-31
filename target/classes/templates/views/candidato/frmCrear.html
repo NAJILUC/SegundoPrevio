@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="plantilla/template :: head">
+
+</head>
+
+<body>
+
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container">
+
+		<div class="card bg-light">
+			<div class="card-header bg-dark text-white" th:text="${titulo}">
+
+			</div>
+			<div class="card-body">
+				<form th:action="@{/save}" th:object="${cliente}" method="POST">
+
+
+					<input type="hidden" th:field="*{id}">
+					<div class="mb-3 row">
+						<label for="nombres" class="form-label col-md-2">Nombres</label>
+						<input type="text" th:field="*{nombres}" class="form-control form-control-sm col-md-6"
+							id="nombres" placeholder="Nombres del Cliente">
+						<small></small>
+
+					</div>
+					<div class="mb-3 row">
+						<label for="apellidos" class="form-label col-md-2">Apellidos</label>
+						<input type="text" th:field="*{apellidos}" class="form-control form-control-sm col-md-6"
+							id="apellidos" placeholder="Apellido">
+						<small></small>
+
+					</div>
+					<div class="mb-3 row">
+						<label for="telefono" class="form-label col-md-2">Telefono</label>
+						<input type="text" th:field="*{telefono}" class="form-control form-control-sm col-md-6"
+							id="telefono" placeholder="Telefono">
+						<small></small>
+
+					</div>
+
+					<div class="mb-3 row">
+						<label for="email" class="form-label col-md-2">Email</label>
+						<input type="email" th:field="*{email}" class="form-control form-control-sm col-md-6" id="email"
+							placeholder="Email">
+						<small></small>
+
+					</div>
+
+					<div class="mb-3 row">
+						<label for="ciudad" class="form-label col-md-2">Ciudad</label>
+						<select type="text" class="form-control form-control-sm col-md-6" th:field="*{ciudad}"
+							id="ciudad">
+							<option th:each="ciudad:${ciudades}" th:value="${ciudad.id}" th:text="${ciudad.ciudad}">
+							</option>
+
+						</select>
+						<small></small>
+
+					</div>
+
+					<div class="card-footer bg-dark">
+						<input type="submit" class="btn btn-primary mt-4" value="Guardar">
+					</div>
+
+
+				</form>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<footer th:replace="plantilla/template :: footer"></footer>
+</body>
+
+</html>

@@ -12,7 +12,7 @@
 	<header th:fragment="header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container">
-		    <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/UFPS_Logo.png"></a>
+		    <a class="navbar-brand" th:href="@{/}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/UFPS_Logo.png" style="width: 40px;"></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -21,31 +21,7 @@
 		        <li class="nav-item">
 		          <a class="nav-link active" aria-current="page" th:href="@{/}">Candidatos</a>
 		        </li>
-		        <!-- <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="#">Categorías</a>
-		        </li>-->
-		       <!-- <li class="nav-item">
-		          <a class="nav-link" href="#">Link</a>
-		        </li>
-		        <li class="nav-item dropdown">
-		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Dropdown
-		          </a>
-		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-		            <li><a class="dropdown-item" href="#">Action</a></li>
-		            <li><a class="dropdown-item" href="#">Another action</a></li>
-		            <li><hr class="dropdown-divider"></li>
-		            <li><a class="dropdown-item" href="#">Something else here</a></li>
-		          </ul>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-		        </li>
-		      </ul>
-		      <form class="d-flex">
-		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-		        <button class="btn btn-outline-success" type="submit">Search</button>
-		      </form>-->
+		       
 		    </div>
 		  </div>
 		</nav>
@@ -62,7 +38,7 @@
 	<footer th:fragment="footer" class="bg-dark text-white text-center fixed-bottom">
 	
 			<div class="container">
-			<p>Marca de agua 2021</p>
+			<p>Julian Navarro 2021</p>
 			</div>
 	
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

@@ -16,51 +16,40 @@
 
 			</div>
 			<div class="card-body">
-				<form th:action="@{/save}" th:object="${cliente}" method="POST">
+				<form th:action="@{/save}" th:object="${candidatos}" method="POST">
 
 
 					<input type="hidden" th:field="*{id}">
 					<div class="mb-3 row">
 						<label for="nombres" class="form-label col-md-2">Nombres</label>
-						<input type="text" th:field="*{nombres}" class="form-control form-control-sm col-md-6"
-							id="nombres" placeholder="Nombres del Cliente">
+						<input type="text" th:field="*{nombre}" class="form-control form-control-sm col-md-6"
+							id="nombres" placeholder="Nombres del Cliente" required>
 						<small></small>
 
 					</div>
 					<div class="mb-3 row">
 						<label for="apellidos" class="form-label col-md-2">Apellidos</label>
-						<input type="text" th:field="*{apellidos}" class="form-control form-control-sm col-md-6"
-							id="apellidos" placeholder="Apellido">
+						<input type="text" th:field="*{apellido}" class="form-control form-control-sm col-md-6"
+							id="apellidos" placeholder="Apellido" required>
 						<small></small>
 
 					</div>
 					<div class="mb-3 row">
-						<label for="telefono" class="form-label col-md-2">Telefono</label>
-						<input type="text" th:field="*{telefono}" class="form-control form-control-sm col-md-6"
-							id="telefono" placeholder="Telefono">
-						<small></small>
-
-					</div>
-
-					<div class="mb-3 row">
-						<label for="email" class="form-label col-md-2">Email</label>
-						<input type="email" th:field="*{email}" class="form-control form-control-sm col-md-6" id="email"
-							placeholder="Email">
+						<label for="telefono" class="form-label col-md-2">Documento</label>
+						<input type="text" th:field="*{documento}" class="form-control form-control-sm col-md-6"
+							id="telefono" placeholder="Documento" required>
 						<small></small>
 
 					</div>
 
 					<div class="mb-3 row">
-						<label for="ciudad" class="form-label col-md-2">Ciudad</label>
-						<select type="text" class="form-control form-control-sm col-md-6" th:field="*{ciudad}"
-							id="ciudad">
-							<option th:each="ciudad:${ciudades}" th:value="${ciudad.id}" th:text="${ciudad.ciudad}">
-							</option>
-
-						</select>
+						<label for="numero" class="form-label col-md-2">Numero</label>
+						<input type="text" th:field="*{numero}" class="form-control form-control-sm col-md-6" id="numero"
+							placeholder="Numero" required>
 						<small></small>
 
 					</div>
+
 
 					<div class="card-footer bg-dark">
 						<input type="submit" class="btn btn-primary mt-4" value="Guardar">
